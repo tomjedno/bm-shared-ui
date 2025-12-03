@@ -1,27 +1,14 @@
 {
   "name": "bm-shared-ui",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Shared UI komponenty a styly pro BM interní aplikace",
   "main": "index.js",
   "module": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tomjedno/bm-shared-ui.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "type": "module",
+  "license": "MIT",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
     "react-router-dom": "^6.0.0"
-  },
-  "bugs": {
-    "url": "https://github.com/tomjedno/bm-shared-ui/issues"
-  },
-  "homepage": "https://github.com/tomjedno/bm-shared-ui#readme"
+  }
 }
