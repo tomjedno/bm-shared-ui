@@ -35,7 +35,6 @@ export function Navbar({
           <a
             key={index}
             href={link.href}
-            className="nav-link"
           >
             {link.label}
           </a>
@@ -43,9 +42,7 @@ export function Navbar({
           <Link
             key={index}
             to={link.href}
-            className={
-              "nav-link" + (location.pathname === link.href ? " active" : "")
-            }
+            className={location.pathname === link.href ? " active" : ""}
           >
             {link.label}
           </Link>
