@@ -1,0 +1,183 @@
+
+:root {
+  --color-bg: #fff;
+  --color-fg: #222;
+  --color-accent: #2266ee;
+  --color-btn: #f4f4f6;
+  --color-btn-border: #ccd1d9;
+  --color-border: #e0e0e0;
+  --color-card-bg: #fafbfc;
+  --color-card-shadow: 0 1px 4px rgba(22,26,32,0.05);
+  --gutter: clamp(12px, 3vw, 32px);
+  --content-max: 1600px; 
+}
+
+html, body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  padding: 24px;
+  background: var(--color-card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--color-card-shadow);
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--color-fg);
+}
+
+input, textarea {
+  border: 1px solid var(--color-border);
+  padding: 0.55em 0.8em;
+  border-radius: 7px;
+  background: #fcfcfd;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.2s;
+}
+input:focus, textarea:focus {
+  border-color: var(--color-accent);
+}
+
+button {
+  background: var(--color-btn);
+  color: var(--color-fg);
+  border: 1px solid var(--color-btn-border);
+  border-radius: 7px;
+  padding: 0.5em 1.3em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  box-shadow: 0 1px 8px rgba(22,26,32,0.03);
+}
+button:hover {
+  background: #e9eef6;
+  border-color: var(--color-accent);
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--color-card-shadow);
+  padding: 18px;
+  margin-bottom: 16px;
+}
+
+/* navbar – vzhled, který už používáš */
+.navbar {
+  display: flex;
+  gap: 2em;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5em;
+  margin-bottom: 2em;
+  background: none;
+}
+.navbar a {
+  color: var(--color-fg);
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  transition: background 0.13s;
+}
+.navbar a.active,
+.navbar a:hover {
+  background: #e9eef6;
+  color: var(--color-accent);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.45em;
+  color: #888;
+  font-size: 0.96em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+}
+
+th, td {
+  padding: 0.6em 1em;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--color-card-bg);
+}
+
+.modal-overlay {
+  backdrop-filter: blur(3px);
+}
+
+/* roztáhne blok přes celý viewport, i když parent je úzký container */
+.full-bleed {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.full-bleed-slab {
+  background: #f7f8fb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 4%);
+  padding: 16px;
+}
+
+.full-bleed-inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+body { overflow-x: hidden; }
+
+.full-bleed-canvas {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.app-container.dashboard-page {
+  max-width: none;
+  width: min(var(--content-max), calc(100vw - 2 * var(--gutter)));
+  margin: 40px auto 0;
+  padding: 24px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  box-shadow: var(--color-card-shadow);
+}
+
