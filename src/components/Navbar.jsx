@@ -44,6 +44,7 @@ export function Navbar({
             to={link.href}
             className={location.pathname === link.href ? " active" : ""}
           >
+            
             {link.label}
           </Link>
         )

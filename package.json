@@ -1,6 +1,6 @@
 {
   "name": "bm-shared-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shared UI komponenty a styly pro BM interní aplikace",
   "main": "index.js",
   "module": "index.js",
