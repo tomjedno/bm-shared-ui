@@ -17,13 +17,12 @@ export function AppShell({
 }) {
   return (
     <div className="bm-app-root">
-      <header className="app-header">
-        <div className="container">
+      <main className="app-container">
+        {/* NAVBAR JE UVNITŘ OBSAHU */}
+        <div className="app-header app-header--inside">
           <Navbar links={links} hideOnPrefix={hideNavbarOnPrefix} />
         </div>
-      </header>
 
-      <main className="app-container">
         {children}
       </main>
     </div>
