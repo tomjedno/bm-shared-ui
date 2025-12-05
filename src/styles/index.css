@@ -1,3 +1,4 @@
+/*bm-shared-ui/src/styles/index.css*/
 :root {
   --color-bg: #fff;
   --color-fg: #222;
@@ -9,6 +10,8 @@
   --color-card-shadow: 0 1px 4px rgba(22,26,32,0.05);
   --gutter: clamp(12px, 3vw, 32px);
   --content-max: 1600px; 
+  --content-max-width: 1000px; /* drž o stejné hodnotě jako .app-container */
+  --container-x-pad: 1.25rem;  /* vodorovné vnitřní odsazení */
 }
 
 html, body {
@@ -96,6 +99,10 @@ button:hover {
   padding: 0.2em 0.5em;
   border-radius: 4px;
   transition: background 0.13s;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: .75rem 0; /* srovná s .container horizontálním paddingem */
 }
 .navbar a.active, .navbar a:hover {
   background: #e9eef6;
@@ -258,4 +265,46 @@ body { overflow-x: hidden; }
   opacity: 0.75;
   margin-top: 2px;
   text-align: center;
+}
+
+/* --- listy & flex utility (shared) --- */
+.list-reset { list-style: none; margin: 0; padding: 0; }
+
+.row-flex {
+  display: flex;
+  gap: 1.5em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.col-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  flex: 1;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+/* drobná utilita pro obrázky/náhledy */
+.mt-2 { margin-top: 0.5em; }
+
+.container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-left: var(--container-x-pad);
+  padding-right: var(--container-x-pad);
+}
+
+/* Header obal pro navbar – sjednotí šířku + border */
+.app-header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }

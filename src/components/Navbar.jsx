@@ -23,7 +23,11 @@ export function Navbar({
     links && links.length
       ? links
       : [
-          { label: "Portál", href: "https://tomasjedno.cz/portal", external: true },
+          {
+            label: "Portál",
+            href: "https://tomasjedno.cz/portal",
+            external: true,
+          },
           { label: "Dashboard", href: "/dashboard" },
           { label: "Import", href: "/upload" },
         ];
@@ -35,6 +39,9 @@ export function Navbar({
           <a
             key={index}
             href={link.href}
+            className="nav-link"
+            target="_blank"
+            rel="noopener"
           >
             {link.label}
           </a>
@@ -42,9 +49,10 @@ export function Navbar({
           <Link
             key={index}
             to={link.href}
-            className={location.pathname === link.href ? " active" : ""}
+            className={`nav-link${
+              location.pathname === link.href ? " active" : ""
+            }`}
           >
-            
             {link.label}
           </Link>
         )
