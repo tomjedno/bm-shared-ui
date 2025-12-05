@@ -14,12 +14,15 @@ export function AppShell({
   appName,
   links,
   hideNavbarOnPrefix = "/share",
+  containerClassName = "",
   children,
 }) {
   return (
     <div className="bm-app-root">
-      <Navbar links={links} hideOnPrefix={hideNavbarOnPrefix} />
-      <div className="app-container">{children}</div>
+      <div className={`app-container ${containerClassName}`}>
+        <Navbar links={links} hideOnPrefix={hideNavbarOnPrefix} />
+        {children}
+      </div>
     </div>
   );
 }
