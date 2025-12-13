@@ -6,6 +6,8 @@ const variantClass = {
   danger: "btn btn-danger",
   success: "btn btn-success",
   subtle: "btn btn-subtle",
+  tonal: "btn btn-tonal",
+  outline: "btn btn-outline",
 };
 
 const sizeClass = {
@@ -14,13 +16,25 @@ const sizeClass = {
   lg: "btn-lg",
 };
 
-export function Button({ variant = "primary", size = "md", className = "", children, ...rest }) {
-  const classes = [variantClass[variant] || variantClass.primary, sizeClass[size] || sizeClass.md, className]
+export function Button({
+  variant = "primary",
+  size = "md",
+  className = "",
+  children,
+  ...rest
+}) {
+  const { block, ...other } = rest; // umožníme <Button block />
+  const classes = [
+    variantClass[variant] || variantClass.primary,
+    sizeClass[size] || sizeClass.md,
+    block ? "btn-block" : "",
+    className,
+  ]
     .filter(Boolean)
     .join(" ");
 
   return (
-    <button className={classes} {...rest}>
+    <button className={classes} {...other}>
       {children}
     </button>
   );

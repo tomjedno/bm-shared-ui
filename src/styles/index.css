@@ -317,3 +317,34 @@ body { overflow-x: hidden; }
   font-weight: 600;
   border: 1px solid var(--color-border);
 }
+
+.btn-tonal {
+  background: #eef2f7;
+  color: var(--color-fg);
+  border-color: var(--color-border);
+}
+.btn-tonal:hover {
+  background: #e6ebf3;
+  border-color: var(--color-border-strong);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-fg);
+  border-color: var(--color-border-strong);
+}
+.btn-outline:hover {
+  background: #f6f7fb;
+  border-color: var(--color-border);
+}
+
+.btn-block {
+  display: inline-flex;
+  width: 100%;
+}
+
+/* jemnější stín a „rounded“ na hover – decentní mikro-interakce */
+.btn:hover {
+  box-shadow: 0 6px 18px rgba(31, 41, 51, 0.08);
+  border-radius: 12px;
+}
