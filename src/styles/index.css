@@ -13,7 +13,7 @@
   --color-btn-border: #d1d5db;
   --shadow-card: 0 10px 30px rgba(31, 41, 51, 0.06);
   --gutter: clamp(12px, 3vw, 32px);
-  --content-max: 1440px;
+  --content-max: 1600px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
