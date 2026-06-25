@@ -379,3 +379,4 @@ body { overflow-x: hidden; }
 
 /* Malé horizontální odsazení mezi prvky */
 .inline-gap > * + * { margin-left: 10px; }
+
